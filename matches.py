@@ -75,7 +75,7 @@ class Server:
             return "Bien joué, " + str(ennemy) 
         elif self.beforeWeight < weight: # on est en position de force
             self.beforeWeight = weight
-            return "KABOOM on te dégomme"
+            return "KABOOM on te dégomme " + str(ennemy)
 class Button:
     background_normal = ""
     background_down = ""
