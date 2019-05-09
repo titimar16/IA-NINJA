@@ -1,6 +1,6 @@
-# IA NINJA
+# IA NINJA - QUIXO IA
 <br/>**by Thibaut Maringer & Quentin Soffie**
-<br/>QUIXO IA
+<br/>
 <br/>**1) Introduction**
 <br/>Notre IA a été créée avec amour et détermination
 <br/>
