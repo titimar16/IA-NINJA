@@ -1,4 +1,2 @@
-# IA-NINJA
-Thibaut Maringer & Quentin Soffie
-=
+# IA-NINJA by Thibaut Maringer & Quentin Soffie
 <br/>QUIXO IA 
