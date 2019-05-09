@@ -3,8 +3,10 @@
 <br/>QUIXO IA
 <br/>**1) Introduction**
 <br/>Notre IA a été créée avec amour et détermination
+<br/>
 <br/>**2) Librairies utilisées**
 <br/>Nous utilisons *CherryPy*, *Sys*, *Time* et *UtilsQuixo*, cette dernière a été créée par nos soins.
+<br/>
 <br/>**3) Stratégies**
 <br/>Scanne les différentes possibilités de jeux et joue le coup qui a le plus grand *poids*, ce dernier étant jugé en fonction de la *"menace" adverse*. En fonction de cette dernière, l'intelligence artificielle est soit *agressive* soit *défensive*. Elle prévoit également les *prochains coups* pour mieux contrer l'IA adverse.
 <br/>
