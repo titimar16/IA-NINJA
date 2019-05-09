@@ -73,7 +73,7 @@ class Server:
             return "Bien joué " + self.ennemyName  
         elif self.beforeWeight > weight: # on est en position de force
             self.beforeWeight = weight
-            return "On est chaud chaud balle" 
+            return "On est chaud chaud balle"
 class Button:
     background_normal = ""
     background_down = ""
