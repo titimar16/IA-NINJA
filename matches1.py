@@ -68,10 +68,10 @@ class Server:
         elif weight == -1000000000: # on a perdu
             self.beforeWeight = weight
             return "Woow ca pue tres tres fort pour nous, " + self.ennemyName
-        elif self.beforeWeight < weight: # on est en position de faiblesse
+        elif self.beforeWeight > weight: # on est en position de faiblesse
             self.beforeWeight = weight
             return "Bien joué " + self.ennemyName  
-        elif self.beforeWeight > weight: # on est en position de force
+        elif self.beforeWeight < weight: # on est en position de force
             self.beforeWeight = weight
             return "On est chaud chaud balle"
 class Button:
