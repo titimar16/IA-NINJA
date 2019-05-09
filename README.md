@@ -4,7 +4,7 @@
 - **Introduction**
 <br/>Notre IA a été créée avec amour et détermination
 - **Librairies utilisées**
-<br/>Nous utilisons *CherryPy*, *sys*, *time* et *utilsQuixo*, cette dernière à été créée par nos soins.
+<br/>Nous utilisons *CherryPy*, *sys*, *time* et *utilsQuixo*, cette dernière a été créée par nos soins.
 <br/>
 <br/>
 <br/>
