@@ -58,16 +58,15 @@ class Server:
     beforeWeight = 0
     ennemyName = ""
     def returnMessage(self,weight):
-        
         if self.beforeWeight == 0: # on debute la partie
             self.beforeWeight = weight
-            return "Debut de la partie, " + self.ennemyName
+            return "Debut de la partie, bonjour " + self.ennemyName
         elif weight == 1000000000: # on a gagné
             self.beforeWeight = weight
             return "Woow on gagne la partie contre " + self.ennemyName   
         elif weight == -1000000000: # on a perdu
             self.beforeWeight = weight
-            return "Woow ca pue tres tres fort pour nous " + self.ennemyName
+            return "Woow ca pue tres tres fort pour nous, " + self.ennemyName
         elif self.beforeWeight < weight: # on est en position de faiblesse
             self.beforeWeight = weight
             return "Bien joué " + self.ennemyName  
