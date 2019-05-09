@@ -14,15 +14,18 @@ class Server:
         if cherrypy.request.method == "OPTIONS":
             return ''
         body = cherrypy.request.json
-        jaja = self.Action(body["game"],body["you"],body["players"],body["moves"])
-        return jaja
-    def Action(self,game,you,players,moves):
+        ACTIONS = self.Action(body,body["game"],body["you"],body["players"],body["moves"])
+        return ACTIONS
+    def Action(self,body,game,you,players,moves):
         direction = ""
         Myself = 0
+        ennemyName = ""
         if players[0] == you:
             Myself = 0
+            ennemyName = players[1]
         else:
             Myself = 1
+            ennemyName = players[0]
         myButtonList = self.convertListButtons(game,Myself)
         iaCmd = utilsQuixo.startIA(myButtonList)
         if iaCmd[1] == True and iaCmd[2] == True:
@@ -33,7 +36,7 @@ class Server:
             direction = "S"
         elif iaCmd[1] == False and iaCmd[2] == False:
             direction = "N"
-        return {"move" : {"cube" : int(iaCmd[3]), "direction" : str(direction)} , "message": self.returnMessage(iaCmd[0])}
+        return {"move" : {"cube" : int(iaCmd[3]), "direction" : str(direction)} , "message": self.returnMessage(ennemyName,iaCmd[0])}
     def convertListButtons(self,moves,myself):
         listbutton = []
         for i in range(25):
@@ -57,23 +60,22 @@ class Server:
                 listbutton.append(btn)
         return listbutton
     beforeWeight = 0
-    ennemyName = ""
-    def returnMessage(self,weight):
+    def returnMessage(self,ennemy,weight):
         if self.beforeWeight == 0: # on debute la partie
             self.beforeWeight = weight
-            return "Debut de la partie, bonjour " + self.ennemyName
+            return "Debut de la partie, bonjour " + str(ennemy)
         elif weight == 1000000000: # on a gagné
             self.beforeWeight = weight
-            return "Woow on gagne la partie contre " + self.ennemyName   
+            return "Woow on a gagne la partie :D" 
         elif weight == -1000000000: # on a perdu
             self.beforeWeight = weight
-            return "Woow ca pue tres tres fort pour nous, " + self.ennemyName
+            return "Bon bah on a perdu :("
         elif self.beforeWeight > weight: # on est en position de faiblesse
             self.beforeWeight = weight
-            return "Bien joué " + self.ennemyName  
+            return "Bien joué, " + str(ennemy) 
         elif self.beforeWeight < weight: # on est en position de force
             self.beforeWeight = weight
-            return "On est chaud chaud balle"
+            return "KABOOM on te dégomme"
 class Button:
     background_normal = ""
     background_down = ""
