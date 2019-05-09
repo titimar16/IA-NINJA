@@ -3,7 +3,7 @@
 <br/>QUIXO IA 
 - **Introduction**
 <br/>Notre IA a été créée avec amour et détermination
-- **Librairies utilisées
+- **Librairies utilisées**
 <br/>Nous utilisons *CherryPy*, *sys*, *time* et *utilsQuixo*, cette dernière à été créée par nos soins.
 <br/>
 <br/>
