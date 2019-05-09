@@ -1,5 +1,5 @@
 # IA NINJA - QUIXO IA
-<br/><div align="center"><img src = "https://scontent-bru2-1.xx.fbcdn.net/v/t1.15752-9/60245597_593791624462555_5406541017304268800_n.jpg?_nc_cat=106&_nc_ht=scontent-bru2-1.xx&oh=0f8e3bb582c21d757b5da37d71781757&oe=5D6928F6"></div>
+<br/><div align="center"><img src = "https://scontent-bru2-1.xx.fbcdn.net/v/t1.15752-9/60211900_306845146901199_1670357629462904832_n.jpg?_nc_cat=104&_nc_ht=scontent-bru2-1.xx&oh=fa760d57832ca6c206241c0cca45ca80&oe=5D6A6654"></div>
 <br/>**by Thibaut Maringer & Quentin Soffie**
 <br/>
 <br/>**1) Introduction**
