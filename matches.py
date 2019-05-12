@@ -66,16 +66,16 @@ class Server:
             return "Debut de la partie, bonjour " + str(ennemy)
         elif weight == 1000000000: # on a gagné
             self.beforeWeight = weight
-            return "Woow on a gagne la partie :D" 
+            return "Woow on a gagne la partie (ﾉ◕ヮ◕)ﾉ" 
         elif weight == -1000000000: # on a perdu
             self.beforeWeight = weight
             return "Bon bah on a perdu :("
         elif self.beforeWeight > weight: # on est en position de faiblesse
             self.beforeWeight = weight
-            return "Bien joué, " + str(ennemy) 
+            return "Bien joué, " + str(ennemy) + "ლ(ಠ_ಠლ)"
         elif self.beforeWeight < weight: # on est en position de force
             self.beforeWeight = weight
-            return "KABOOM on te dégomme " + str(ennemy)
+            return "KABOOM on te dégomme " + str(ennemy) + "(ง •̀_•́)ง"
 class Button:
     background_normal = ""
     background_down = ""
