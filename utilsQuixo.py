@@ -9,10 +9,6 @@ def startIA(listebtn):
     listWeight = getTheBestWeight(simplelist,True,True) # liste de liste de tuple = [[(valueWeight,horizontale,droitebas,cell),...]]
     result = anticipationBlow(listWeight,simplelist)
     return result
-    
-
-    
-                    
 
 def anticipationBlow(listWeight,simplelist):
     # mode anticipation du tour suivant : on check le poid qu 'on obtient dans le prochain coups
@@ -38,7 +34,6 @@ def anticipationBlow(listWeight,simplelist):
         
         return BestWeight2[1] # meilleur lancé possible
 
-
 def getTheBestWeight(simplelist,round,returnlist = False):
     cellReachable = getReachableCells(simplelist,round)
     listWeight = [] # liste de tuple = [(valueWeight,horizontale,droitebas,cell)]
@@ -56,10 +51,7 @@ def getTheBestWeight(simplelist,round,returnlist = False):
                 BestWeight = i
         
         return BestWeight # meilleur lancé possible 
-    
-
-
-
+  
 def evaluateAllAction(cell,mylist,round,returnlist = False):
     listWeight = [] # list of tuple
     if int(cell) == 0:
@@ -102,9 +94,6 @@ def evaluateAllAction(cell,mylist,round,returnlist = False):
                 BestWeight = i
         return BestWeight
 
-
- 
-
 def generateWeightSpell(cell,listebtn,round):
     agressif = 0
     defensif = 0
@@ -122,10 +111,6 @@ def generateWeightSpell(cell,listebtn,round):
         return -1000000000 # si le coups est perdant, on annule le coups
     ratio = agressif - defensif
     return ratio
-    
-    
-    
-    
 
 def generateWeightMyself(mylist):
     #Calcul du nombre de rond aligné on possede
@@ -228,9 +213,6 @@ def generateWeightEnnemy(mylist):
     if num == 5:
         return 1000000000
     return weight
-
-    
-
 
 def convertToSimpleList(listbtn):
     mines = []
@@ -376,8 +358,6 @@ def canLaunchSpell(btn,index,round):
 def convertMatrix(columns,rows):
     return columns + rows * 5
 
-
-
 def checkIfValueX(btn):
     if btn == "casevide.png":
         return True
@@ -392,4 +372,3 @@ def checkIfValueNothing(btn):
     if btn == "case2.png":
         return True
     return False
-
